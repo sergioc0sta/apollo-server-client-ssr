@@ -1,0 +1,19 @@
+{
+  "name": "apollo-server",
+  "version": "1.0.0",
+  "description": "Simple backend server with apollo",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"./**/*.js\" --quiet",
+    "lintFull": "eslint \"./**/*.js\"",
+    "lintFix": "eslint --fix './**/*.js'"
+  },
+  "dependencies": {
+    "apollo-server": "^2.21.2",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
