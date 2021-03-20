@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint:recommended", 
+    "prettier"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-var": "error", 
+    "prefer-const": "error",
+    "eqeqeq": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
