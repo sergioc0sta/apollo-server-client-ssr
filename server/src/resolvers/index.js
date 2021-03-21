@@ -1,8 +1,7 @@
-const persons = require('../data');
-
 const resolvers = {
   Query: {
-    persons: () => persons,
+    users: (root, context) => context().then((db) => db.collection('users').find().toArray()),
+    user: (root, args, context) => context().then((db) => db.collection('users').findOne({_id: args.id})),
   },
 };
 

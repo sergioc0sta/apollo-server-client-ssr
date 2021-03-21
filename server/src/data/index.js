@@ -1,16 +1,5 @@
-const persons = [
-  {
-    name: 'Tone',
-    age: 20,
-  },
-  {
-    name: 'Maria',
-    age: 21,
-  },
-  {
-    name: 'Quinhas',
-    age: 22,
-  },
-];
+const { MongoClient } = require('mongodb');
 
-module.exports = persons;
+const context = () => MongoClient.connect('mongodb://username:password@localhost:27017/graphql', { useNewUrlParser: true }).then((client) => client.db('graphql'));
+
+module.exports = context;

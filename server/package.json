@@ -2,21 +2,13 @@
   "name": "apollo-server",
   "version": "1.0.0",
   "description": "Simple backend server with apollo",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon index.js",
     "lint": "eslint \"./**/*.js\" --quiet",
     "lintFull": "eslint \"./**/*.js\"",
     "lintFix": "eslint --fix './**/*.js'",
-    "format": "prettier --write '**/*.{js,jsx}'",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "NODE_ENV=production npm run lint",
-      "pre-push": "npm run lint"
-    }
+    "format": "prettier --write '**/*.{js,jsx}'"
   },
   "nodemonConfig": {
     "watch": [
@@ -27,15 +19,17 @@
     ]
   },
   "dependencies": {
-    "apollo-server": "^2.21.2",
-    "graphql": "^15.5.0"
+    "apollo-server-express": "^2.21.2",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "mongodb": "^3.6.5",
+    "notarealdb": "^0.2.2"
   },
   "devDependencies": {
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^5.1.3",
     "prettier": "^2.2.1"
   }
 }
