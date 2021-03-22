@@ -1,7 +1,10 @@
+/* eslint-disable no-underscore-dangle */
+const User = require('../modules/user');
+
 const resolvers = {
   Query: {
-    users: (root, context) => context().then((db) => db.collection('users').find().toArray()),
-    user: (root, args, context) => context().then((db) => db.collection('users').findOne({_id: args.id})),
+    users: () => User.find({}),
+    user: (root, args) => User.findOne({ _id: args._id }),
   },
 };
 

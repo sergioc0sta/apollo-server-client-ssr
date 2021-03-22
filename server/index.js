@@ -1,7 +1,12 @@
 const express = require('express');
-const server = require('./src/config/server');
+const { ApolloServer } = require('apollo-server-express');
+require('./src/config/database');
+
+const typeDefs = require('./src/types/index');
+const resolvers = require('./src/resolvers/index');
 
 const app = express();
+const server = new ApolloServer({ typeDefs, resolvers });
 
 server.applyMiddleware({ app });
 

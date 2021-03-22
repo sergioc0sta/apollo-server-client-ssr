@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "mongodb": "^3.6.5",
+    "mongoose": "^5.12.2",
     "notarealdb": "^0.2.2"
   },
   "devDependencies": {
